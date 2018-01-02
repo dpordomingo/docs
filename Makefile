@@ -37,7 +37,11 @@ build-self:
 # compiles the config parser
 build-config-parser:
 	@$(MKDIR) bin;
-	$(GO_BUILD) bin/config src/*.go
+	$(GO_BUILD) bin/config src/config/*.go
+
+build-examples-parser:
+	@$(MKDIR) bin;
+	$(GO_BUILD) bin/examples src/examples/*.go
 
 # generates the errors page
 build-errors:

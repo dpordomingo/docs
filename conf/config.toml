@@ -1,5 +1,5 @@
 ["engine.sourced.tech"]
-  repository = "src-d/spark-api"
+  repository = "src-d/engine"
   min-version = "v0.0.11"
 
 ["enry.sourced.tech"]

@@ -12,4 +12,4 @@ docs:
 		DESTINATION_PATH=$(DESTINATION_PATH) \
 		SOURCES=$(shell pwd) \
 		FORCE_GENERATION=true \
-		SERVE=$(SERVE)
+		MODE=$(MODE)

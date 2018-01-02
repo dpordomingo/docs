@@ -42,6 +42,7 @@ docs-api-python:
 	cp "$(sphinx_path)/logo-blue.svg" _static && \
 	make html && \
 	cd .. && \
+	$(REMOVE) $(api_docs_path)/python && \
 	mv __api_py/_build/html "$(api_docs_path)/python" && \
 	echo 'Generated API docs for Python.';
 
@@ -71,6 +72,7 @@ docs-api-cpp:
 	cp "$(sphinx_path)/logo-blue.svg" _static && \
 	make html && \
 	cd .. && \
+	$(REMOVE) $(api_docs_path)/cpp && \
 	mv __api_cpp/_build/html "$(api_docs_path)/cpp" && \
 	echo 'Generated API docs for C++.';
 
@@ -78,5 +80,6 @@ docs-api-scala:
 	@cd $(SOURCES) && \
 	echo "target in Compile in doc := baseDirectory.value / \"__api_scala\"" >> build.sbt && \
 	sbt doc && \
+	$(REMOVE) $(api_docs_path)/scala && \
 	mv __api_scala "$(api_docs_path)/scala" && \
 	echo 'Generated API docs for Scala.';
